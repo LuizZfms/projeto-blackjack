@@ -11,3 +11,30 @@
  * 
  */
 
+    console.log("Boas vindas ao jogo Blackjack")
+    let iniciarJogo = confirm("Gostaria de iniciar uma nova rodada?")
+       const jogador1 = comprarCarta()
+       const jogador2 = comprarCarta()
+       const maquina1 = comprarCarta()
+       const maquina2 = comprarCarta()
+       const somaJogador = jogador1.valor + jogador2.valor
+       const somaMaquina = maquina1.valor + maquina2.valor
+    if (iniciarJogo === true) {
+       confirm (`Usuário - cartas: ${jogador1.texto}, ${jogador2.texto},
+       Computador - cartas: ${maquina1.texto}. Deseja comprar mais uma carta?`)
+       //if (confirm === true)
+       //return 
+
+
+       //if (jogador1 && jogador2 === "A")
+       
+       if (somaJogador > somaMaquina) {
+         alert("o jogador ganhou")
+       } else if (somaJogador === somaMaquina) {
+         alert("Empate")
+       } else {
+          alert("a maquina ganhou")
+       }
+    } else {
+       alert("O jogo acabou.")
+    }
